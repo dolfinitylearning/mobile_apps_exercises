@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Puppies</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" data-theme="c">
+
+	<div data-role="header">
+		<h1>Puppies</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="c">	
+    <p>Puppies are young dogs. Here's a puppy:</p>
+    <p class="image-container">
+      <img src="puppy.jpg" alt="Puppy">
+    </p>
+    <p class="credit">
+      Source: 
+        <a href="http://en.wikipedia.org/wiki/Puppies" rel="external" target="blank">
+          Wikipedia
+        </a>
+    </p>
+		<p>Have you ever seen anything cuter?</p>
+    <div data-role="collapsible" data-theme="c" data-content-theme="c">
+      <h3>Dog quote</h3>
+      <p>Groucho Marx said:</p>
+      <blockquote>
+        Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.
+      </blockquote>
+    </div>
+    <div data-role="collapsible" data-theme="c" data-content-theme="c">
+      <h3>Dog joke</h3>
+      <p>Q: Why does a dog scratch himself?</p>
+      <div data-role="collapsible" data-theme="c" data-content-theme="e">
+        <h4>Answer</h4>
+        <p>Because no one else knows where it itches.</p>
+      </div>
+    </div>
+		<p class="small-print">Kittens are cute, too.</p>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+</html>

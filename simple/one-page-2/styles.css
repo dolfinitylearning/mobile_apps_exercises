@@ -1,0 +1,17 @@
+.credit {
+  text-align: right;
+  font-size: 80%;
+}
+
+.image-container {
+  text-align: center;
+}
+
+img {
+  padding: 0.1em;
+  border: 0.2em solid #555;
+}
+
+.small-print {
+  font-size: 80%;
+}
