@@ -1,4 +1,4 @@
 mobile_apps_exercises
 =====================
 
-Exercises for mobile apps course
+Solutions to the mobile apps exercises for Kieran Mathieson's classes.
