@@ -26,6 +26,8 @@
         $("#fahrenheit").text(user_input);
         $("#celsius").text(result);
         $("#output-container").show();
+        //Focus back to the input.
+        $("#input").focus();
       })
     });
   </script>
@@ -40,10 +42,14 @@
 
 	<div data-role="content">
     <h2>Fahrenheit to Celsius</h2>
-    <div id="input-container">
-      <label for="input">Degrees F</label>
-      <input type="text" id="input" size="6" maxlength="5">
-      <a id="convert" href="#" data-role="button">Convert</a>
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <label for="input" class="ui-hidden-accessible">Degrees F</label>
+        <input type="text" name="input" id="input" placeholder="Degrees F"/>
+      </div>
+      <div class="ui-block-b">
+        <a id="convert" href="#" data-role="button">Convert</a>
+      </div>
     </div>
     <div id="output-container">
       <span id="fahrenheit"></span>&deg; F = <span id="celsius"></span>&deg; C
