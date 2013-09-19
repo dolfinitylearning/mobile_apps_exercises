@@ -20,10 +20,11 @@
           return;
         }
         //Compute fahranheit.
-        var result = user_input * 1.8 + 32;
+        var result = (user_input - 32)/1.8;
+        result = parseFloat(result).toFixed(2)
         //Display output.
-        $("#celsius").text(user_input);
-        $("#fahrenheit").text(result);
+        $("#fahrenheit").text(user_input);
+        $("#celsius").text(result);
         $("#output-container").show();
       })
     });
@@ -38,14 +39,14 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-    <h2>Celsius to Fahrenheit</h2>
+    <h2>Fahrenheit to Celsius</h2>
     <div id="input-container">
-      <label for="input">Degrees C</label>
+      <label for="input">Degrees F</label>
       <input type="text" id="input" size="6" maxlength="5">
       <a id="convert" href="#" data-role="button">Convert</a>
     </div>
     <div id="output-container">
-      <span id="celsius"></span>&deg; C = <span id="fahrenheit"></span>&deg; F
+      <span id="fahrenheit"></span>&deg; F = <span id="celsius"></span>&deg; C
     </div>
     <a id="back-button" href="#" data-rel="back" data-role="button" data-icon="arrow-l">Menu</a>
 	</div><!-- /content -->

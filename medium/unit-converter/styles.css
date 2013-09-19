@@ -1,13 +1,22 @@
 /* See http://forum.jquery.com/topic/setting-input-width */
-.input-container label.ui-input-text {
+#input-container label.ui-input-text {
 }
-.input-container input.ui-input-text { 
+#input-container input.ui-input-text { 
   width: 8em; 
   display: inline-block;
 }
-.input-container .ui-btn { 
+#input-container .ui-btn { 
   margin-left: 1em;
   display: inline-block;
   width: 50%;
   float: right;
+}
+
+#output-container {
+  margin-top: 0.5em;
+  font-size: 200%;
+}
+
+#back-button {
+  margin-top: 1em;
 }
