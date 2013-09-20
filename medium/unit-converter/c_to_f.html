@@ -25,7 +25,13 @@
         $("#celsius").text(user_input);
         $("#fahrenheit").text(result);
         $("#output-container").show();
-      })
+      });
+      $("#input").keypress(function(evnt) {
+        if ( evnt.which == 13 ) {
+          evnt.preventDefault();
+          $("#convert").click();
+        }
+      });
     });
   </script>
 </head> 

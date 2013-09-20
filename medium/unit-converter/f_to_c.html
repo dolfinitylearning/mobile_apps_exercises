@@ -28,7 +28,13 @@
         $("#output-container").show();
         //Focus back to the input.
         $("#input").focus();
-      })
+      });
+      $("#input").keypress(function(evnt) {
+        if ( evnt.which == 13 ) {
+          evnt.preventDefault();
+          $("#convert").click();
+        }
+      });
     });
   </script>
 </head> 

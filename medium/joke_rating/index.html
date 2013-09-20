@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Joke Rating</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+  <style>
+    #joke {
+      margin-left: 3em;
+    }
+  </style>
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Joke Rating</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+    <p>Please rate this joke.</p>
+    <p id="joke">[Joke]</p>
+    <div data-role="fieldcontain">
+      <label for="funniness">How funny? Drag, then click <strong>Rate</strong>.</label>
+      <input type="range" name="funniness" id="funniness" 
+             data-highlight="true"
+             value="5" min="0" max="10" />
+      <a id="rate" href="#" data-ajax="false" data-role="button">Rate</a>
+    </div>
+    <p id="comment">
+    </p>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+<script>
+  $(document).ready(function() {
+    $("#rate").click(function() {
+      var rating = $("#funniness").val();
+      var message = "";
+      if ( rating < 3 ) {
+        message = "Wow, that joke was a fail.";
+      }
+      else if ( rating < 8 ) {
+        message = "Not too bad.";
+      }
+      else {
+        message = "Good joke!";
+      }
+      $("#comment").text(message);
+    });
+  });
+</script>
+
+</body>
+</html>
